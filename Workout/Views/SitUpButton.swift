@@ -20,5 +20,6 @@ struct SitUpButton: View {
             .background(Color(.systemYellow))
             .clipShape(Circle())
             .onTapGesture(perform: sitUpRobot.addOneSitUp)
+            .onLongPressGesture(perform: sitUpRobot.resetSitUps)
     }
 }

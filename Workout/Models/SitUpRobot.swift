@@ -13,6 +13,11 @@ class SitUpRobot: ObservableObject {
     
     func addOneSitUp() {
         completedSitUps = completedSitUps + 1
-        print("You have done \(completedSitUps) sit-ups.")
+        print(completedSitUps)
+    }
+    
+    func resetSitUps() {
+        completedSitUps = 0
+        print(completedSitUps)
     }
 }

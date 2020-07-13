@@ -13,6 +13,11 @@ class PushUpRobot: ObservableObject {
     
     func addOnePushUp() {
         completedPushUps = completedPushUps + 1
-        print("You have done \(completedPushUps) push-ups.")
+        print(completedPushUps)
+    }
+    
+    func resetPushUps() {
+        completedPushUps = 0
+        print(completedPushUps)
     }
 }

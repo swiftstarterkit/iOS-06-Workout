@@ -20,5 +20,6 @@ struct PushUpButton: View {
             .background(Color(.systemRed))
             .clipShape(Circle())
             .onTapGesture(perform: pushUpRobot.addOnePushUp)
+            .onLongPressGesture(perform: pushUpRobot.resetPushUps)
     }
 }
