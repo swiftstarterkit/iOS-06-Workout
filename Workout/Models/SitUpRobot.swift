@@ -14,10 +14,16 @@ class SitUpRobot: ObservableObject {
     func addOneSitUp() {
         completedSitUps = completedSitUps + 1
         print(completedSitUps)
+        generateHapticFeedback()
     }
     
     func resetSitUps() {
         completedSitUps = 0
         print(completedSitUps)
+        generateHapticFeedback()
+    }
+    
+    func generateHapticFeedback() {
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
     }
 }

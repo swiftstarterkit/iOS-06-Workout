@@ -14,10 +14,16 @@ class PushUpRobot: ObservableObject {
     func addOnePushUp() {
         completedPushUps = completedPushUps + 1
         print(completedPushUps)
+        generateHapticFeedback()
     }
     
     func resetPushUps() {
         completedPushUps = 0
         print(completedPushUps)
+        generateHapticFeedback()
+    }
+    
+    func generateHapticFeedback() {
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
     }
 }
